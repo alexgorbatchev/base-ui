@@ -1,6 +1,6 @@
 {
   "name": "@base-ui/react",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "author": "MUI Team",
   "description": "Base UI is a library of headless ('unstyled') React components and low-level hooks. You gain complete control over your app's CSS and accessibility features.",
   "license": "MIT",
@@ -14,11 +14,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mui/base-ui.git",
+    "url": "git+https://github.com/alexgorbatchev/base-ui.git",
     "directory": "packages/react"
   },
   "bugs": {
-    "url": "https://github.com/mui/base-ui/issues"
+    "url": "https://github.com/alexgorbatchev/base-ui/issues"
   },
   "homepage": "https://base-ui.com",
   "funding": {
@@ -172,7 +172,8 @@
   "sideEffects": false,
   "publishConfig": {
     "access": "public",
-    "directory": "build"
+    "directory": "build",
+    "name": "@alexgorbatchev/base-ui"
   },
   "engines": {
     "node": ">=14.0.0"
