@@ -9,6 +9,17 @@ export interface Release {
 export const releases: Release[] = [
   {
     latest: true,
+    version: 'v1.9.1',
+    versionSlug: 'v1-9-1',
+    date: '2026-10-31',
+    highlights: [
+      'Preserve focus moved before deferred popup restoration.',
+      'Improve popup keyboard, hover, and screen-reader interactions.',
+      'Fix Menu and Select interactions inside shadow roots.',
+      'Improve Drawer virtual keyboard behavior on Android.',
+    ],
+  },
+  {
     version: 'v1.9.0',
     versionSlug: 'v1-9-0',
     date: '2026-10-09',

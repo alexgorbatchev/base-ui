@@ -20,6 +20,7 @@ import {
   isJSDOM,
   isScrollLocked,
   popupConformanceTests,
+  resetBrowserPointer,
   wait,
 } from '#test-utils';
 import { OPEN_DELAY } from '../utils/constants';
@@ -28,6 +29,7 @@ import { REASONS } from '../../internals/reasons';
 import { createChangeEventDetails } from '../../internals/createBaseUIEventDetails';
 
 describe('<Popover.Root />', () => {
+  beforeEach(resetBrowserPointer);
   beforeEach(() => {
     globalThis.BASE_UI_ANIMATIONS_DISABLED = true;
   });

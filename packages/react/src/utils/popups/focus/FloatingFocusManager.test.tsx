@@ -2347,31 +2347,33 @@ describe('FloatingFocusManager', () => {
       };
     }
 
-    test.skipIf(isJSDOM)(
-      'popup: keeps focus that moved elsewhere before the deferred re-focus',
-      async () => {
-        render(<App restoreFocus="popup" />);
+    test.skipIf(isJSDOM).each([
+      { name: 'removed', isDisabled: false },
+      { name: 'disabled then removed', isDisabled: true },
+    ])('popup: keeps newer focus after the focused element is $name', async ({ isDisabled }) => {
+      render(<App restoreFocus="popup" />);
 
-        await userEvent.click(screen.getByTestId('reference'));
-        await flushMicrotasks();
+      await userEvent.click(screen.getByTestId('reference'));
+      await flushMicrotasks();
 
-        const two = screen.getByRole('button', { name: 'two' });
-        const three = screen.getByRole('button', { name: 'three' });
+      const two = screen.getByRole<HTMLButtonElement>('button', { name: 'two' });
+      const three = screen.getByRole('button', { name: 'three' });
 
-        expect(two).toHaveFocus();
+      expect(two).toHaveFocus();
 
-        const runAnimationFrames = holdAnimationFrames();
-        fireEvent.click(screen.getByText('remove'));
-        await flushMicrotasks();
-        expect(screen.getByTestId('floating')).toHaveFocus();
+      const runAnimationFrames = holdAnimationFrames();
+      two.disabled = isDisabled;
+      expect(two.disabled).toBe(isDisabled);
+      fireEvent.click(screen.getByText('remove'));
+      await flushMicrotasks();
+      expect(screen.getByTestId('floating')).toHaveFocus();
 
-        // the app moves focus before the next frame
-        three.focus();
-        runAnimationFrames();
+      // the app moves focus before the next frame
+      three.focus();
+      runAnimationFrames();
 
-        expect(three).toHaveFocus();
-      },
-    );
+      expect(three).toHaveFocus();
+    });
 
     test.skipIf(isJSDOM)(
       'popup: re-focuses the popup when focus is still lost on the next frame',

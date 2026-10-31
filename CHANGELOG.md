@@ -1,5 +1,158 @@
 # Versions
 
+## v1.9.1
+
+<!-- generated comparing ad7ecda5296b0295b41a51ecb01fce6204acd099...4e89b3adfa3ad773ffdf78aaa6aedfd1ccb46720 -->
+
+_Oct 31, 2026_
+
+### General changes
+
+- Batch animation lookups for elements closing together (#5987) by @flaviendelangle
+- Export `resolveRenderedId` (#6038) by @flaviendelangle
+- Keep focus that moved elsewhere before the deferred focus restore (#6015) by @cristianchiriac
+- Skip hidden return-focus targets inside closed keepMounted popups (#5971) by @atomiks
+- Focus the trigger before a screen reader press opens it (#6016) by @henryqdineen
+- Keep focus inside modal popups when Tab is pressed faster than a frame (#6036) by @atomiks
+- Center an arrow that mounts after the popup is positioned (#6035) by @atomiks
+- Flip capped popups to the larger side after they grow (#6046) by @atomiks
+- Apply the same open-change rules to every popup (#6111) by @michaldudak
+- Use `useReducer` in `useForcedRerendering` (#5914) by @romgrk
+
+### Accordion
+
+- Reflect the part's own `disabled` in `data-disabled` (#6067) by @flaviendelangle
+
+### Alert Dialog
+
+- Keep the trigger that reopens a popup during its exit animation (#5896) by @michaldudak
+- Dismiss after dropped IME compositions (#5978) by @jjenzz
+- Wait for container refs before mounting (#5963) by @LukasTy
+
+### Autocomplete
+
+- Fix update depth error and lost keystrokes when controlled (#6001) by @atomiks
+- Remove unused `query` from the derived items context (#6060) by @flaviendelangle
+- Handle Space and Left/Right based on input text (#5997) by @jjenzz
+- Run on the shared popup store and Root (#6014) by @michaldudak
+- Use a hidden input type outside of forms (#5999) by @Psycarlo
+
+### Checkbox
+
+- Respect a render element's aria-label over associated labels (#5982) by @henryqdineen
+
+### Collapsible
+
+- Reflect the part's own `disabled` in `data-disabled` (#6067) by @flaviendelangle
+
+### Combobox
+
+- Remove unused `query` from the derived items context (#6060) by @flaviendelangle
+- Handle Space and Left/Right based on input text (#5997) by @jjenzz
+- Run on the shared popup store and Root (#6014) by @michaldudak
+- Use a hidden input type outside of forms (#5999) by @Psycarlo
+
+### Dialog
+
+- Fix outside press crash when the target is the document (#6057) by @skrabe
+- Keep the trigger that reopens a popup during its exit animation (#5896) by @michaldudak
+- Dismiss after dropped IME compositions (#5978) by @jjenzz
+- Wait for container refs before mounting (#5963) by @LukasTy
+- Close only the topmost layer when Escape reaches the document (#5992) by @lyzno1
+
+### Drawer
+
+- Reopen the keyboard after native dismissal on iOS 27 (#5897) by @atomiks
+- Keep native taps on a focused input on Android (#6110) by @atomiks
+- Avoid repeated keyboard alignment scrolls on Android (#6069) by @atomiks
+- Detect keyboards that resize the layout viewport on Android (#6121) by @atomiks
+- Keep the trigger that reopens a popup during its exit animation (#5896) by @michaldudak
+- Wait for container refs before mounting (#5963) by @LukasTy
+
+### Form
+
+- Avoid a compositor layer per hidden input without a name (#6049) by @flaviendelangle
+
+### Menu
+
+- Highlight the last item when ArrowUp opens a filterable menu (#5964) by @lyzno1
+- Keep the filter query until the popup finishes closing (#5966) by @maricastroc
+- Focus list items before click activation (#5931) by @jjenzz
+- Handle Space and Left/Right based on input text (#5997) by @jjenzz
+- Keep the popup open when the press is released inside a shadow root (#6064) by @flaviendelangle
+- Keep the trigger that reopens a popup during its exit animation (#5896) by @michaldudak
+- Wait for container refs before mounting (#5963) by @LukasTy
+
+### Meter
+
+- Fix SSR hydration mismatch on formatted values (#5985) by @cpruijsen
+
+### Number Field
+
+- Fix parsing of formatted negatives, unit labels and non-Latin digits (#5973) by @atomiks
+
+### OTP Field
+
+- Submit the owning form when used outside a Field (#6008) by @atomiks
+- Move focus to the first empty slot when the value shrinks externally (#5969) by @atomiks
+
+### Popover
+
+- Fix Tab from a hover-opened trigger stopping on a focus guard (#5970) by @atomiks
+- Keep the trigger that reopens a popup during its exit animation (#5896) by @michaldudak
+- Dismiss after dropped IME compositions (#5978) by @jjenzz
+- Wait for container refs before mounting (#5963) by @LukasTy
+
+### Portal
+
+- Wait for container refs before mounting (#5963) by @LukasTy
+
+### Preview Card
+
+- Keep the trigger that reopens a popup during its exit animation (#5896) by @michaldudak
+- Wait for container refs before mounting (#5963) by @LukasTy
+
+### Progress
+
+- Fix SSR hydration mismatch on formatted values (#5985) by @cpruijsen
+
+### Radio Group
+
+- Skip the tab stop when the group is disabled (#6022) by @rohits2501
+
+### Select
+
+- Keep the popup open when the press is released inside a shadow root (#6064) by @flaviendelangle
+- Wait for container refs before mounting (#5963) by @LukasTy
+- Avoid re-rendering every item when the popup closes (#6024) by @mdm317
+- Keep controlled value current during item updates (#5903) by @jjenzz
+- Run on the shared popup store and Root (#6014) by @michaldudak
+- Use a hidden input type outside of forms (#5999) by @Psycarlo
+
+### Slider
+
+- Reflect the part's own `disabled` in `data-disabled` (#6067) by @flaviendelangle
+- Fix SSR hydration mismatch on formatted values (#5985) by @cpruijsen
+- Fix edge-aligned thumbs not re-measuring after resize (#6000) by @atomiks
+
+### Switch
+
+- Respect a render element's aria-label over associated labels (#5982) by @henryqdineen
+
+### Toast
+
+- Wait for container refs before mounting (#5963) by @LukasTy
+- Resume auto-dismiss timers when a hidden provider is revealed (#5952) by @flaviendelangle
+- Fix focus traps and timer resets during keyboard and pointer interaction (#5972) by @atomiks
+
+### Tooltip
+
+- Keep the trigger that reopens a popup during its exit animation (#5896) by @michaldudak
+- Wait for container refs before mounting (#5963) by @LukasTy
+- Keep the trigger disabled when the root is disabled (#6066) by @flaviendelangle
+
+All contributors of this release in alphabetical order: @atomiks, @cpruijsen, @cristianchiriac, @flaviendelangle, @henryqdineen, @jjenzz, @LukasTy, @lyzno1, @maricastroc, @mdm317, @michaldudak, @Psycarlo, @rohits2501, @romgrk, @skrabe
+
 ## v1.9.0
 
 <!-- generated comparing v1.8.0...master -->

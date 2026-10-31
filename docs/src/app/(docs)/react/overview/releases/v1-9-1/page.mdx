@@ -1,0 +1,149 @@
+# v1.9.1
+
+<Subtitle>Oct 31, 2026</Subtitle>
+<Meta name="description" content="v1.9.1 release notes. Oct 31, 2026." />
+
+## General changes
+
+- Batch animation lookups for elements closing together ([#5987](https://github.com/mui/base-ui/pull/5987))
+- Export `resolveRenderedId` ([#6038](https://github.com/mui/base-ui/pull/6038))
+- Keep focus that moved elsewhere before the deferred focus restore ([#6015](https://github.com/mui/base-ui/pull/6015))
+- Skip hidden return-focus targets inside closed keepMounted popups ([#5971](https://github.com/mui/base-ui/pull/5971))
+- Focus the trigger before a screen reader press opens it ([#6016](https://github.com/mui/base-ui/pull/6016))
+- Keep focus inside modal popups when Tab is pressed faster than a frame ([#6036](https://github.com/mui/base-ui/pull/6036))
+- Center an arrow that mounts after the popup is positioned ([#6035](https://github.com/mui/base-ui/pull/6035))
+- Flip capped popups to the larger side after they grow ([#6046](https://github.com/mui/base-ui/pull/6046))
+- Apply the same open-change rules to every popup ([#6111](https://github.com/mui/base-ui/pull/6111))
+- Use `useReducer` in `useForcedRerendering` ([#5914](https://github.com/mui/base-ui/pull/5914))
+
+## Accordion
+
+- Reflect the part's own `disabled` in `data-disabled` ([#6067](https://github.com/mui/base-ui/pull/6067))
+
+## Alert Dialog
+
+- Keep the trigger that reopens a popup during its exit animation ([#5896](https://github.com/mui/base-ui/pull/5896))
+- Dismiss after dropped IME compositions ([#5978](https://github.com/mui/base-ui/pull/5978))
+- Wait for container refs before mounting ([#5963](https://github.com/mui/base-ui/pull/5963))
+
+## Autocomplete
+
+- Fix update depth error and lost keystrokes when controlled ([#6001](https://github.com/mui/base-ui/pull/6001))
+- Remove unused `query` from the derived items context ([#6060](https://github.com/mui/base-ui/pull/6060))
+- Handle Space and Left/Right based on input text ([#5997](https://github.com/mui/base-ui/pull/5997))
+- Run on the shared popup store and Root ([#6014](https://github.com/mui/base-ui/pull/6014))
+- Use a hidden input type outside of forms ([#5999](https://github.com/mui/base-ui/pull/5999))
+
+## Checkbox
+
+- Respect a render element's aria-label over associated labels ([#5982](https://github.com/mui/base-ui/pull/5982))
+
+## Collapsible
+
+- Reflect the part's own `disabled` in `data-disabled` ([#6067](https://github.com/mui/base-ui/pull/6067))
+
+## Combobox
+
+- Remove unused `query` from the derived items context ([#6060](https://github.com/mui/base-ui/pull/6060))
+- Handle Space and Left/Right based on input text ([#5997](https://github.com/mui/base-ui/pull/5997))
+- Run on the shared popup store and Root ([#6014](https://github.com/mui/base-ui/pull/6014))
+- Use a hidden input type outside of forms ([#5999](https://github.com/mui/base-ui/pull/5999))
+
+## Dialog
+
+- Fix outside press crash when the target is the document ([#6057](https://github.com/mui/base-ui/pull/6057))
+- Keep the trigger that reopens a popup during its exit animation ([#5896](https://github.com/mui/base-ui/pull/5896))
+- Dismiss after dropped IME compositions ([#5978](https://github.com/mui/base-ui/pull/5978))
+- Wait for container refs before mounting ([#5963](https://github.com/mui/base-ui/pull/5963))
+- Close only the topmost layer when Escape reaches the document ([#5992](https://github.com/mui/base-ui/pull/5992))
+
+## Drawer
+
+- Reopen the keyboard after native dismissal on iOS 27 ([#5897](https://github.com/mui/base-ui/pull/5897))
+- Keep native taps on a focused input on Android ([#6110](https://github.com/mui/base-ui/pull/6110))
+- Avoid repeated keyboard alignment scrolls on Android ([#6069](https://github.com/mui/base-ui/pull/6069))
+- Detect keyboards that resize the layout viewport on Android ([#6121](https://github.com/mui/base-ui/pull/6121))
+- Keep the trigger that reopens a popup during its exit animation ([#5896](https://github.com/mui/base-ui/pull/5896))
+- Wait for container refs before mounting ([#5963](https://github.com/mui/base-ui/pull/5963))
+
+## Form
+
+- Avoid a compositor layer per hidden input without a name ([#6049](https://github.com/mui/base-ui/pull/6049))
+
+## Menu
+
+- Highlight the last item when ArrowUp opens a filterable menu ([#5964](https://github.com/mui/base-ui/pull/5964))
+- Keep the filter query until the popup finishes closing ([#5966](https://github.com/mui/base-ui/pull/5966))
+- Focus list items before click activation ([#5931](https://github.com/mui/base-ui/pull/5931))
+- Handle Space and Left/Right based on input text ([#5997](https://github.com/mui/base-ui/pull/5997))
+- Keep the popup open when the press is released inside a shadow root ([#6064](https://github.com/mui/base-ui/pull/6064))
+- Keep the trigger that reopens a popup during its exit animation ([#5896](https://github.com/mui/base-ui/pull/5896))
+- Wait for container refs before mounting ([#5963](https://github.com/mui/base-ui/pull/5963))
+
+## Meter
+
+- Fix SSR hydration mismatch on formatted values ([#5985](https://github.com/mui/base-ui/pull/5985))
+
+## Number Field
+
+- Fix parsing of formatted negatives, unit labels and non-Latin digits ([#5973](https://github.com/mui/base-ui/pull/5973))
+
+## OTP Field
+
+- Submit the owning form when used outside a Field ([#6008](https://github.com/mui/base-ui/pull/6008))
+- Move focus to the first empty slot when the value shrinks externally ([#5969](https://github.com/mui/base-ui/pull/5969))
+
+## Popover
+
+- Fix Tab from a hover-opened trigger stopping on a focus guard ([#5970](https://github.com/mui/base-ui/pull/5970))
+- Keep the trigger that reopens a popup during its exit animation ([#5896](https://github.com/mui/base-ui/pull/5896))
+- Dismiss after dropped IME compositions ([#5978](https://github.com/mui/base-ui/pull/5978))
+- Wait for container refs before mounting ([#5963](https://github.com/mui/base-ui/pull/5963))
+
+## Portal
+
+- Wait for container refs before mounting ([#5963](https://github.com/mui/base-ui/pull/5963))
+
+## Preview Card
+
+- Keep the trigger that reopens a popup during its exit animation ([#5896](https://github.com/mui/base-ui/pull/5896))
+- Wait for container refs before mounting ([#5963](https://github.com/mui/base-ui/pull/5963))
+
+## Progress
+
+- Fix SSR hydration mismatch on formatted values ([#5985](https://github.com/mui/base-ui/pull/5985))
+
+## Radio Group
+
+- Skip the tab stop when the group is disabled ([#6022](https://github.com/mui/base-ui/pull/6022))
+
+## Select
+
+- Keep the popup open when the press is released inside a shadow root ([#6064](https://github.com/mui/base-ui/pull/6064))
+- Wait for container refs before mounting ([#5963](https://github.com/mui/base-ui/pull/5963))
+- Avoid re-rendering every item when the popup closes ([#6024](https://github.com/mui/base-ui/pull/6024))
+- Keep controlled value current during item updates ([#5903](https://github.com/mui/base-ui/pull/5903))
+- Run on the shared popup store and Root ([#6014](https://github.com/mui/base-ui/pull/6014))
+- Use a hidden input type outside of forms ([#5999](https://github.com/mui/base-ui/pull/5999))
+
+## Slider
+
+- Reflect the part's own `disabled` in `data-disabled` ([#6067](https://github.com/mui/base-ui/pull/6067))
+- Fix SSR hydration mismatch on formatted values ([#5985](https://github.com/mui/base-ui/pull/5985))
+- Fix edge-aligned thumbs not re-measuring after resize ([#6000](https://github.com/mui/base-ui/pull/6000))
+
+## Switch
+
+- Respect a render element's aria-label over associated labels ([#5982](https://github.com/mui/base-ui/pull/5982))
+
+## Toast
+
+- Wait for container refs before mounting ([#5963](https://github.com/mui/base-ui/pull/5963))
+- Resume auto-dismiss timers when a hidden provider is revealed ([#5952](https://github.com/mui/base-ui/pull/5952))
+- Fix focus traps and timer resets during keyboard and pointer interaction ([#5972](https://github.com/mui/base-ui/pull/5972))
+
+## Tooltip
+
+- Keep the trigger that reopens a popup during its exit animation ([#5896](https://github.com/mui/base-ui/pull/5896))
+- Wait for container refs before mounting ([#5963](https://github.com/mui/base-ui/pull/5963))
+- Keep the trigger disabled when the root is disabled ([#6066](https://github.com/mui/base-ui/pull/6066))
