@@ -1,5 +1,5 @@
 {
-  "name": "@base-ui/utils",
+  "name": "@alexgorbatchev/utils",
   "version": "0.5.1",
   "author": "MUI Team",
   "description": "A collection of React utility functions for Base UI.",

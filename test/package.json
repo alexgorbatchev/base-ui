@@ -5,8 +5,8 @@
     "typescript": "tsgo -p tsconfig.json"
   },
   "devDependencies": {
-    "@base-ui/react": "workspace:*",
-    "@base-ui/utils": "workspace:*",
+    "@base-ui/react": "workspace:@alexgorbatchev/react@*",
+    "@base-ui/utils": "workspace:@alexgorbatchev/utils@*",
     "@playwright/test": "1.64.1",
     "@testing-library/dom": "10.4.2",
     "@testing-library/jest-dom": "7.0.1",

@@ -1,5 +1,5 @@
 {
-  "name": "@base-ui/react",
+  "name": "@alexgorbatchev/react",
   "version": "1.9.1",
   "author": "MUI Team",
   "description": "Base UI is a library of headless ('unstyled') React components and low-level hooks. You gain complete control over your app's CSS and accessibility features.",
@@ -130,7 +130,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.29.7 || ^8.0.0",
-    "@base-ui/utils": "workspace:*",
+    "@base-ui/utils": "workspace:@alexgorbatchev/utils@*",
     "@floating-ui/react-dom": "^2.1.9",
     "@floating-ui/utils": "^0.2.12",
     "use-sync-external-store": "^1.7.0"
